@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string text = "съешь ещЄ этих м€гких французских булок да выпей же чаю";
+            Console.WriteLine(text);
+            text = text.Replace("съешь", "—ъешь");
+            text = text.Replace("булок", "булок,");
+            text = text.Replace("чаю", "чаю.");
+            Console.WriteLine("ќшибки исправлены. " + text);
+            Console.ReadKey();
+
+        }
+    }
+}

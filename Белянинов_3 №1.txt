@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("введите три целых числа для уравнения axx + bx + c = 0");
+            int a = 0;
+            while(!int.TryParse(Console.ReadLine(), out a))
+            {
+                Console.WriteLine("Ошибка, повторите ввод");
+            }
+            Console.WriteLine("число коркетно");
+            int b = 0;
+            while(!int.TryParse(Console.ReadLine(), out b))
+            {
+                Console.WriteLine("Ошибка, повторите ввод");
+            }
+            Console.WriteLine("число коркетно");
+            int c = 0;
+            while(!int.TryParse(Console.ReadLine(), out c))
+            {
+                Console.WriteLine("Ошибка, повторите ввод");
+            }
+            Console.WriteLine("число корректно");
+
+            int D;
+            D = (b * b - 4 * a * c);
+            double x, x1, x2;
+            if (D<0)
+                Console.WriteLine("корней нет");
+            if (D == 0)
+            {
+                x = (-b / (2 * a));
+                Console.WriteLine("корень " + x);
+               
+            }
+            if (D > 0)
+            {
+                x1 = (-b - Math.Sqrt(D) / (2 * a));
+		//должно быть x1 = (-b - Math.Sqrt(D)) / (2 * a);
+                x2 = (-b + Math.Sqrt(D) / (2 * a));
+		//должно быть x2 = (-b + Math.Sqrt(D)) / (2 * a);
+                Console.WriteLine("корень " + x1 + "; " + x2);
+            }
+            Console.ReadKey();
+      
+
+
+
+
+
+
+        }
+    }
+}

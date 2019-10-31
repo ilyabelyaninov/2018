@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           
+            string pattern = @"^([А-Я]{1}[а-я]+\s[А-Я]{1}[а-я]+\s[А-Я]{1}[а-я]+)$";
+
+            while (true)
+            {
+                Console.WriteLine("Запишите свое ФИО");
+                string FIO = Console.ReadLine();
+
+                if (Regex.IsMatch(FIO, pattern))
+                {
+                    Console.WriteLine("Запись подтверждена");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Некорректная запись");
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
