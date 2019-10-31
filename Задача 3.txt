@@ -1,0 +1,66 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("origin ");
+            int[] nums = new int[5] { 1, 5, 4, 5, 1 };
+            foreach (int i in nums)
+                Console.Write(i);
+            bool end = true;
+            int[] nums_copy;
+            Console.WriteLine();
+            do
+            {
+                end = true;
+                Console.WriteLine("try ");
+                nums_copy = new int[5];
+                nums.CopyTo(nums_copy, 0);
+                nums_copy = ReplaceElements(nums_copy);
+                for (int i = 0; i < nums_copy.Length; i++)
+                {
+                    if (nums[i] == nums_copy[i]) end = false;
+                }
+
+                foreach (int i in nums)
+                    Console.Write(i);
+                {
+                    while (!end) ;
+
+                    Console.WriteLine();
+                    Console.WriteLine("result ");
+
+                    foreach (int i in nums_copy)
+                        Console.Write(i);
+                    Console.ReadKey();
+        }
+            
+        static int[] ReplaceElements(int[] nums)
+        {
+            for(int i = 0; i<nums.Length; i++)
+            {
+                        for(int h = i + 1; h < nums.Length; h++)
+
+
+                        {
+                            Random rnd = new Random();
+                            int index = rnd.Next(h, nums.Length - 1);
+                            if (nums[index] != nums_copy[i])
+                            int temp = nums[i];
+                            nums[i] = nums[index];
+                            nums[index] = temp;
+                        }
+                    
+                }
+                returt nums;
+            }
+        }
+    } 

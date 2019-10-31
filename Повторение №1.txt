@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите значение n");
+            int n;
+            n = Convert.ToInt32(Console.ReadLine());
+            Random rnd = new Random();
+            int o = rnd.Next(1, n);
+            Console.WriteLine("Здравствуйте, угадайте число за 5 попыток от 1 до " + n);
+            int u;
+            u = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < 5; i++)
+            {
+
+                if (u > o)
+                {
+                    Console.WriteLine("Загаданное число меньше");
+                    u = Convert.ToInt32(Console.ReadLine());
+                }
+                
+               if (u < o)
+               {
+                        Console.WriteLine("Загаданное число больше");
+                        u = Convert.ToInt32(Console.ReadLine());
+                }
+                
+                
+               if (u == o)
+               {
+                   Console.WriteLine("Вы угадали");
+                    Console.ReadKey();
+                }
+             
+            }
+            Console.ReadKey();
+        }
+    }
+}

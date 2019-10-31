@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("введите пример");
+            int a = 0;
+            int b = 0;
+            string pattern = @"^(\d[-/\+\*]{1}\d)$";
+            string act="";
+            while (true)
+            {
+                string QWER = Console.ReadLine();
+
+                if (Regex.IsMatch(QWER, pattern))
+                {
+                    Console.WriteLine("запись подтверждена");
+                    a = Convert.ToInt32(QWER[0].ToString());
+                    act = QWER[1].ToString();
+                    b = Convert.ToInt32(QWER[2].ToString());
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("запись не подтверждена");
+                }
+            }
+                Console.WriteLine("a{0}b={1}", act, Calc(a, b, act));
+            Console.ReadKey();
+        }
+
+        public static int Calc(int a, int b, string action)
+        {
+            int Result = 0;
+            switch (action)
+            {
+                case "/":
+                    Result = a / b;
+                    break;
+                case "+":
+                    Result = a + b;
+                    break;
+                case "-":
+                    Result = a - b;
+                    break;
+                case "*":
+                    Result = a * b;
+                    break;
+            }
+
+            return Result;
+        }
+    }
+}

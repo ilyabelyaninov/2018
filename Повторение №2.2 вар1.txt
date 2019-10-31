@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("¬ведите число дл€ массива");
+            int m;
+            m = Convert.ToInt32(Console.ReadLine());
+            int[] nums = new int[m];
+            Random rnd = new Random();
+            int p = 1;
+            int q = 2;
+            int w = 3;
+            int e = 4;
+            int t = 5;
+            int o = 0;
+            int y = 0;
+            int f = 0;
+            int h = 0;
+            int j = 0;
+            for(int i = 0; i < m; i++)
+            {
+                nums[i] = rnd.Next(1, 5);
+
+                if (nums[i]==p)
+                {
+                    o = o + 1;
+                }
+                if(nums[i] == q)
+                {
+                    y = y + 1;
+                }
+                if(nums[i] == w)
+                {
+                    f = f + 1;
+                }
+                if(nums[i] == e)
+                {
+                    h = h + 1;
+                }
+                if(nums[i] == t)
+                {
+                    j = j + 1;
+                }
+            }
+            foreach (int l in nums)
+            {
+                Console.Write(l);
+                Console.Write("  ");
+            }
+            Console.WriteLine("ќтвет 1:" + o + "  2:" + y + "  3:" + f + "  4:" + h + "  5:" + j);
+            Console.ReadKey();
+        }
+    }
+}
