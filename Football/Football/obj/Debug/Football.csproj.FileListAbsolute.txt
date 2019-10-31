@@ -1,0 +1,11 @@
+Z:\Football\Football\bin\Debug\Football.mdf
+Z:\Football\Football\bin\Debug\Football_log.ldf
+Z:\Football\Football\bin\Debug\Football.exe.config
+Z:\Football\Football\bin\Debug\Football.exe
+Z:\Football\Football\bin\Debug\Football.pdb
+Z:\Football\Football\obj\Debug\Football.csprojResolveAssemblyReference.cache
+Z:\Football\Football\obj\Debug\Football.Properties.Resources.resources
+Z:\Football\Football\obj\Debug\Football.csproj.GenerateResource.cache
+Z:\Football\Football\obj\Debug\Football.csproj.CoreCompileInputs.cache
+Z:\Football\Football\obj\Debug\Football.exe
+Z:\Football\Football\obj\Debug\Football.pdb
